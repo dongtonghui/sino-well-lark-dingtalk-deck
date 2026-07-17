@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>现状 · Sino-Well 是谁</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); }
+.slide { width: var(--w); height: var(--h); padding: var(--pad-y) var(--pad-x); position: relative; overflow: hidden; }
+.bg-gradient { position: absolute; inset: 0; background: radial-gradient(ellipse at 28% 22%, rgba(227, 24, 55, 0.14) 0%, transparent 48%), radial-gradient(ellipse at 85% 85%, rgba(242, 169, 0, 0.04) 0%, transparent 38%); }
+.page-header { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 13px; color: var(--ink-dim); letter-spacing: 0.12em; text-transform: uppercase; position: relative; z-index: 1; }
+.page-header.bordered { border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 60px; }
+.page-footer { position: absolute; bottom: var(--pad-y); left: var(--pad-x); right: var(--pad-x); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); border-top: 1px solid var(--line-sub); padding-top: 22px; z-index: 1; }
+.kicker { font-family: var(--font-mono); font-size: 14px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 16px; position: relative; z-index: 1; }
+h1 { font-family: var(--font-display); font-size: 58px; font-weight: 700; margin: 0 0 40px; line-height: 1.15; position: relative; z-index: 1; }
+.big-num { font-family: var(--font-mono); font-size: 96px; font-weight: 500; color: var(--accent); line-height: 1; position: relative; z-index: 1; text-shadow: 0 0 30px var(--accent-glow); }
+.card { background: var(--paper); border: 1px solid var(--line-sub); padding: 40px 44px; border-radius: 16px; backdrop-filter: blur(12px); position: relative; z-index: 1; }
+.card.accent { border-color: var(--line); }
+.card-label { font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; }
+.card-title { font-family: var(--font-display); font-size: 30px; font-weight: 700; margin: 0 0 6px; }
+.card-sub { font-size: 17px; color: var(--ink-muted); margin-bottom: 24px; }
+.price { font-family: var(--font-mono); font-size: 44px; font-weight: 500; color: var(--accent); margin-bottom: 20px; text-shadow: 0 0 20px var(--accent-glow); }
+.price span { font-size: 18px; color: var(--ink-muted); margin-left: 10px; }
+ul.clean { list-style: none; padding: 0; margin: 0; }
+ul.clean li { position: relative; padding-left: 22px; font-size: 18px; line-height: 1.7; color: var(--ink-muted); margin-bottom: 10px; }
+ul.clean li::before { content: ""; position: absolute; left: 0; top: 11px; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
+ul.clean li strong { color: var(--ink); font-weight: 600; }
+.footnote { font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); line-height: 1.5; z-index: 1; position: relative; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; position: relative; z-index: 1; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; z-index: 1; }
+.metric { text-align: center; padding: 36px; background: var(--paper); border: 1px solid var(--line-sub); border-radius: 16px; }
+.metric .num { font-family: var(--font-mono); font-size: 52px; font-weight: 500; color: var(--accent); text-shadow: 0 0 20px var(--accent-glow); }
+.metric .label { font-size: 16px; color: var(--ink-muted); margin-top: 12px; }
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 12px; color: var(--accent); border: 1px solid var(--line); padding: 6px 12px; border-radius: 6px; margin-right: 8px; }
+.verdict { font-family: var(--font-mono); font-size: 15px; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 16px; margin-top: 16px; line-height: 1.6; }
+.arrow-line { position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+</style>
+</head>
+
+<body>
+<div class="slide">
+  <div class="bg-gradient" aria-hidden="true"></div>
+  
+  <div class="page-header bordered">
+    <div>02 / 09 · WHO WE ARE</div>
+    <div>数字化协同平台选型</div>
+  </div>
+  <div class="kicker">公司现状</div>
+  <h1>外贸科技 B2B，全球团队，已在用钉钉</h1>
+  <div class="grid3" style="margin-bottom: 48px;">
+    <div class="metric">
+      <div class="num">LED</div>
+      <div class="label">植物生长灯</div>
+    </div>
+    <div class="metric">
+      <div class="num">B2B</div>
+      <div class="label">全球专业客户</div>
+    </div>
+    <div class="metric">
+      <div class="num">钉钉</div>
+      <div class="label">当前协同基座</div>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <div class="card-label">中国团队</div>
+      <div class="card-title">研发 + 供应链</div>
+      <ul class="clean">
+        <li><strong>研发：</strong>硬件、光学、APP、固件</li>
+        <li><strong>供应链：</strong>采购、生产、质检、物流</li>
+        <li><strong>工具：</strong>钉钉 + GitLab/Jira 等</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">海外团队</div>
+      <div class="card-title">销售 + 客服 + 代理</div>
+      <ul class="clean">
+        <li><strong>销售：</strong>北美、欧洲、新兴市场</li>
+        <li><strong>客服：</strong>邮件、WhatsApp、工单</li>
+        <li><strong>痛点：</strong>跨时区、多语言、信息分散</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">产品复杂度</div>
+      <div class="card-title">硬件 + 软件 + 服务</div>
+      <ul class="clean">
+        <li><strong>硬件：</strong>灯具、光学、散热、认证</li>
+        <li><strong>软件：</strong>APP、固件、IOT 平台</li>
+        <li><strong>资料：</strong>规格书、认证、FAQ、SOP</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Sino-Well 内部汇报 · 2026.07</div>
+    <div>数字化协同平台选型</div>
+  </div>
+</div>
+</body>
+</html>

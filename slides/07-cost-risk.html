@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>成本与风险 · 不能只看订阅费</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); }
+.slide { width: var(--w); height: var(--h); padding: var(--pad-y) var(--pad-x); position: relative; overflow: hidden; }
+.bg-gradient { position: absolute; inset: 0; background: radial-gradient(ellipse at 28% 22%, rgba(227, 24, 55, 0.14) 0%, transparent 48%), radial-gradient(ellipse at 85% 85%, rgba(242, 169, 0, 0.04) 0%, transparent 38%); }
+.page-header { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 13px; color: var(--ink-dim); letter-spacing: 0.12em; text-transform: uppercase; position: relative; z-index: 1; }
+.page-header.bordered { border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 60px; }
+.page-footer { position: absolute; bottom: var(--pad-y); left: var(--pad-x); right: var(--pad-x); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); border-top: 1px solid var(--line-sub); padding-top: 22px; z-index: 1; }
+.kicker { font-family: var(--font-mono); font-size: 14px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 16px; position: relative; z-index: 1; }
+h1 { font-family: var(--font-display); font-size: 58px; font-weight: 700; margin: 0 0 40px; line-height: 1.15; position: relative; z-index: 1; }
+.big-num { font-family: var(--font-mono); font-size: 96px; font-weight: 500; color: var(--accent); line-height: 1; position: relative; z-index: 1; text-shadow: 0 0 30px var(--accent-glow); }
+.card { background: var(--paper); border: 1px solid var(--line-sub); padding: 40px 44px; border-radius: 16px; backdrop-filter: blur(12px); position: relative; z-index: 1; }
+.card.accent { border-color: var(--line); }
+.card-label { font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; }
+.card-title { font-family: var(--font-display); font-size: 30px; font-weight: 700; margin: 0 0 6px; }
+.card-sub { font-size: 17px; color: var(--ink-muted); margin-bottom: 24px; }
+.price { font-family: var(--font-mono); font-size: 44px; font-weight: 500; color: var(--accent); margin-bottom: 20px; text-shadow: 0 0 20px var(--accent-glow); }
+.price span { font-size: 18px; color: var(--ink-muted); margin-left: 10px; }
+ul.clean { list-style: none; padding: 0; margin: 0; }
+ul.clean li { position: relative; padding-left: 22px; font-size: 18px; line-height: 1.7; color: var(--ink-muted); margin-bottom: 10px; }
+ul.clean li::before { content: ""; position: absolute; left: 0; top: 11px; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
+ul.clean li strong { color: var(--ink); font-weight: 600; }
+.footnote { font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); line-height: 1.5; z-index: 1; position: relative; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; position: relative; z-index: 1; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; z-index: 1; }
+.metric { text-align: center; padding: 36px; background: var(--paper); border: 1px solid var(--line-sub); border-radius: 16px; }
+.metric .num { font-family: var(--font-mono); font-size: 52px; font-weight: 500; color: var(--accent); text-shadow: 0 0 20px var(--accent-glow); }
+.metric .label { font-size: 16px; color: var(--ink-muted); margin-top: 12px; }
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 12px; color: var(--accent); border: 1px solid var(--line); padding: 6px 12px; border-radius: 6px; margin-right: 8px; }
+.verdict { font-family: var(--font-mono); font-size: 15px; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 16px; margin-top: 16px; line-height: 1.6; }
+.arrow-line { position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+</style>
+</head>
+
+<body>
+<div class="slide">
+  <div class="bg-gradient" aria-hidden="true"></div>
+  
+  <div class="page-header bordered">
+    <div>07 / 09 · COST & RISK</div>
+    <div>数字化协同平台选型</div>
+  </div>
+  <div class="kicker">财务现实</div>
+  <h1>全员切换成本可能远高于订阅费</h1>
+  <div class="grid2" style="margin-top: 30px;">
+    <div class="card">
+      <div class="card-title" style="margin-bottom: 24px;">成本匡算（200 人团队）</div>
+      <ul class="clean">
+        <li><strong>钉钉专业版：</strong>约 9,800 元/年（来源：钉钉服务商公开页）</li>
+        <li><strong>飞书/Lark 全员：</strong>约 <strong>¥36-200/人/月</strong>（公开参考价，以官方报价为准）</li>
+        <li><strong>迁移+隐性成本：</strong>45-160 万（数据、集成、培训、效率损失）</li>
+        <li><strong>全员切换首年 TCO：</strong>可能 85 万+</li>
+      </ul>
+      <div class="footnote" style="margin-top:18px;"><strong>数据依据：</strong> 钉钉专业版定价参考钉钉服务商公开资料；飞书/Lark 定价参考飞书官方定价页及 Lark 国际官网，具体以企业实际报价为准。迁移成本为基于 200 人规模、含数据迁移/集成/培训/效率损失的综合估算。</div>
+      <div class="verdict">建议：先试点 30-50 人海外团队，量化 ROI 后再扩展。</div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom: 24px;">关键风险与应对</div>
+      <ul class="clean">
+        <li><strong>数据合规：</strong>明确 Lark 国际版数据驻留，签署 DPA</li>
+        <li><strong>客户入口：</strong>邮件/WhatsApp 不迁移，Lark 只内部协作</li>
+        <li><strong>历史数据：</strong>官方工具迁移 + 重要文件人工校验</li>
+        <li><strong>双平台并行：</strong>设定 2-3 个月过渡期，避免长期两套系统</li>
+      </ul>
+      <div class="verdict">采购时争取锁价、弹性席位、退出支持。</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Sino-Well 内部汇报 · 2026.07</div>
+    <div>数字化协同平台选型</div>
+  </div>
+</div>
+</body>
+</html>

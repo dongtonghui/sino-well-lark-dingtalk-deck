@@ -1,0 +1,20 @@
+:root {
+  --bg: #0A0A0A;
+  --paper: rgba(18, 18, 18, 0.78);
+  --ink: #F2F2F2;
+  --ink-muted: #A0A0A0;
+  --ink-dim: #4A4A4A;
+  --accent: #E31837;
+  --accent-glow: rgba(227, 24, 55, 0.32);
+  --accent-amber: #F2A900;
+  --line: rgba(227, 24, 55, 0.22);
+  --line-sub: rgba(160, 160, 160, 0.15);
+  --font-display: "Inter", "PingFang SC", sans-serif;
+  --font-body: "Inter", "PingFang SC", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --pad-x: 120px;
+  --pad-y: 90px;
+  --w: 1920px;
+  --h: 1080px;
+}
+html, body { width: var(--w); height: var(--h); overflow: hidden; margin: 0; }

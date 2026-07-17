@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>结论 · 三视角共识后的推荐</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); }
+.slide { width: var(--w); height: var(--h); padding: var(--pad-y) var(--pad-x); position: relative; overflow: hidden; }
+.bg-gradient { position: absolute; inset: 0; background: radial-gradient(ellipse at 28% 18%, rgba(255, 59, 59, 0.10) 0%, transparent 55%), radial-gradient(ellipse at 85% 85%, rgba(244, 162, 97, 0.06) 0%, transparent 40%); }
+.scanline { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 59, 59, 0.03) 3px); pointer-events: none; }
+.logo { position: absolute; top: 44px; left: var(--pad-x); height: 38px; z-index: 10; opacity: 0.92; }
+.page-header { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 13px; color: var(--ink-dim); letter-spacing: 0.12em; text-transform: uppercase; position: relative; z-index: 1; margin-top: 64px; }
+.page-header.bordered { border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 52px; }
+.page-footer { position: absolute; bottom: var(--pad-y); left: var(--pad-x); right: var(--pad-x); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); border-top: 1px solid var(--line); padding-top: 22px; z-index: 1; }
+.kicker { font-family: var(--font-mono); font-size: 14px; color: var(--accent-red); letter-spacing: 0.2em; margin-bottom: 16px; position: relative; z-index: 1; }
+h1 { font-family: var(--font-display); font-size: 58px; font-weight: 700; margin: 0 0 40px; line-height: 1.15; position: relative; z-index: 1; }
+.card { background: var(--paper); border: 1px solid var(--line); padding: 38px 42px; border-radius: 16px; backdrop-filter: blur(12px); position: relative; z-index: 1; }
+.card-label { font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; }
+.card-title { font-family: var(--font-display); font-size: 30px; font-weight: 700; margin: 0 0 6px; }
+.card-sub { font-size: 17px; color: var(--ink-muted); margin-bottom: 24px; }
+.price { font-family: var(--font-mono); font-size: 48px; font-weight: 500; color: var(--accent-red); margin-bottom: 16px; text-shadow: 0 0 20px var(--accent-glow); }
+.price span { font-size: 18px; color: var(--ink-muted); margin-left: 10px; }
+ul.clean { list-style: none; padding: 0; margin: 0; }
+ul.clean li { position: relative; padding-left: 22px; font-size: 17px; line-height: 1.7; color: var(--ink-muted); margin-bottom: 10px; }
+ul.clean li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; background: var(--accent-red); border-radius: 50%; box-shadow: 0 0 8px var(--accent-glow); }
+ul.clean li strong { color: var(--ink); font-weight: 600; }
+ul.clean li .tag { color: var(--accent-amber); font-family: var(--font-mono); font-size: 12px; margin-left: 8px; }
+.footnote { font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); line-height: 1.5; z-index: 1; position: relative; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; position: relative; z-index: 1; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; position: relative; z-index: 1; }
+.metric { text-align: center; padding: 32px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; }
+.metric .num { font-family: var(--font-mono); font-size: 52px; font-weight: 500; color: var(--accent-red); text-shadow: 0 0 20px var(--accent-glow); }
+.metric .label { font-size: 16px; color: var(--ink-muted); margin-top: 12px; }
+.underline { text-decoration: underline; text-decoration-color: var(--accent-red); text-underline-offset: 8px; }
+.vision-card { border-left: 3px solid var(--accent-red); padding-left: 28px; }
+</style>
+</head>
+
+<body>
+<div class="slide">
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <img src="../assets/logo-flexstar-up.png" class="logo" alt="Flexstar">
+  
+  <div class="page-header bordered">
+    <div>08 / 09 · CONCLUSION</div>
+    <div>协同平台选型</div>
+  </div>
+  <div class="kicker">结论</div>
+  <h1 style="max-width: 1200px;">Lark 作为海外与产品协作主平台，钉钉保留国内供应链，专业工具链独立</h1>
+  <div class="grid3" style="margin-top: 30px;">
+    <div class="card" style="border-color: var(--accent-red);">
+      <div class="card-label">主平台 · Lark</div>
+      <div class="card-title" style="margin-bottom: 20px;">海外销售 · 客服 · 产品 · 研发协作</div>
+      <ul class="clean">
+        <li>跨时区沟通、会议、文档</li>
+        <li>产品知识库、需求池、PRD</li>
+        <li>AI 会议纪要、翻译、客服辅助</li>
+        <li>海外生态集成（CRM/客服/邮箱）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">保留 · 钉钉</div>
+      <div class="card-title" style="margin-bottom: 20px;">国内供应链 · 工厂 · 行政</div>
+      <ul class="clean">
+        <li>考勤、门禁、国内审批</li>
+        <li>供应商/采购/生产流程</li>
+        <li>阿里生态（1688/菜鸟/支付宝）</li>
+        <li>国内行政与财务报销</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">独立 · 专业工具链</div>
+      <div class="card-title" style="margin-bottom: 20px;">工程 · 研发 · 合规</div>
+      <ul class="clean">
+        <li>GitLab / GitHub 代码仓库</li>
+        <li>Jira / 专业 PLM 需求管理</li>
+        <li>ERP / MES / CRM 核心系统</li>
+        <li>认证文档与审计追踪</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top: 36px; border-color: var(--accent-amber);">
+    <div class="card-label">为什么不是全员切换？</div>
+    <div class="card-title" style="margin-bottom: 18px;">全员切换财务风险过高，双平台分层是更务实的过渡</div>
+    <ul class="clean">
+      <li>200 人全员切换首年成本可能达 85 万+，且钉钉在国内供应链场景不可替代。</li>
+      <li>先用 Lark 解决最痛的出海协作与产品知识沉淀，再评估是否扩大迁移。</li>
+    </ul>
+  </div>
+
+  <div class="page-footer">
+    <div>Sino-Well · 协同平台选型 · 2026.07</div>
+    <div>DINGTALK vs LARK</div>
+  </div>
+</div>
+</body>
+</html>
